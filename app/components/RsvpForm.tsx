@@ -73,7 +73,7 @@ export default function RsvpForm() {
   return (
     <form onSubmit={handleSubmit} className="max-w-md mx-auto p-6 bg-white border border-gray-200 rounded">
       <div className="mb-4">
-        <label htmlFor="name" className="block text-sm font-medium mb-2">
+        <label htmlFor="name" className="block text-sm font-medium mb-2 text-gray-900">
           Name <span className="text-red-500">*</span>
         </label>
         <input
@@ -81,17 +81,17 @@ export default function RsvpForm() {
           id="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full px-3 py-2 border border-gray-300 rounded"
+          className="w-full px-3 py-2 border border-gray-300 rounded bg-white text-gray-900"
           required
         />
       </div>
 
       <div className="mb-4">
-        <label className="block text-sm font-medium mb-2">
+        <label className="block text-sm font-medium mb-2 text-gray-900">
           Will you be attending? <span className="text-red-500">*</span>
         </label>
         <div className="space-y-2">
-          <label className="flex items-center">
+          <label className="flex items-center text-gray-900">
             <input
               type="radio"
               name="attending"
@@ -102,7 +102,7 @@ export default function RsvpForm() {
             />
             Yes, I'll be there!
           </label>
-          <label className="flex items-center">
+          <label className="flex items-center text-gray-900">
             <input
               type="radio"
               name="attending"
@@ -118,7 +118,7 @@ export default function RsvpForm() {
 
       {attending === true && (
         <div className="mb-4">
-          <label htmlFor="plusOne" className="block text-sm font-medium mb-2">
+          <label htmlFor="plusOne" className="block text-sm font-medium mb-2 text-gray-900">
             Plus One Name (optional)
           </label>
           <input
@@ -126,21 +126,21 @@ export default function RsvpForm() {
             id="plusOne"
             value={plusOneName}
             onChange={(e) => setPlusOneName(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded"
+            className="w-full px-3 py-2 border border-gray-300 rounded bg-white text-gray-900"
           />
         </div>
       )}
 
       {attending === true && (
         <div className="mb-4">
-          <label htmlFor="dietary" className="block text-sm font-medium mb-2">
+          <label htmlFor="dietary" className="block text-sm font-medium mb-2 text-gray-900">
             Dietary Restrictions (optional)
           </label>
           <textarea
             id="dietary"
             value={dietaryNeeds}
             onChange={(e) => setDietaryNeeds(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded"
+            className="w-full px-3 py-2 border border-gray-300 rounded bg-white text-gray-900"
             rows={3}
           />
         </div>
