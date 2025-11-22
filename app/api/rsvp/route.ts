@@ -4,12 +4,12 @@ import { supabase, type RsvpData } from '@/lib/supabase'
 export async function POST(request: Request) {
   try {
     const body = await request.json()
-    const { name, attending, plus_one_name, dietary_needs } = body
+    const { name, email, phone, attending, plus_one, dietary_needs, message } = body
 
     // Validate required fields
-    if (!name || typeof attending !== 'boolean') {
+    if (!name || !email || typeof attending !== 'boolean') {
       return NextResponse.json(
-        { error: 'Missing required fields: name and attending' },
+        { error: 'Missing required fields: name, email, and attending' },
         { status: 400 }
       )
     }
@@ -20,9 +20,12 @@ export async function POST(request: Request) {
       .insert([
         {
           name,
+          email,
+          phone: phone || null,
           attending,
-          plus_one_name: plus_one_name || null,
+          plus_one: plus_one,
           dietary_needs: dietary_needs || null,
+          message: message || null,
         },
       ])
       .select()

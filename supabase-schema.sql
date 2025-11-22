@@ -4,11 +4,21 @@
 CREATE TABLE rsvps (
   id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
   name TEXT NOT NULL,
+  email TEXT NOT NULL,
+  phone TEXT,
   attending BOOLEAN NOT NULL,
-  plus_one_name TEXT,
+  plus_one BOOLEAN,
   dietary_needs TEXT,
+  message TEXT,
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
+
+-- If you already have the table, run these ALTER commands instead:
+-- ALTER TABLE rsvps ADD COLUMN email TEXT;
+-- ALTER TABLE rsvps ADD COLUMN phone TEXT;
+-- ALTER TABLE rsvps DROP COLUMN plus_one_name;
+-- ALTER TABLE rsvps ADD COLUMN plus_one BOOLEAN;
+-- ALTER TABLE rsvps ADD COLUMN message TEXT;
 
 -- Enable Row Level Security (RLS)
 ALTER TABLE rsvps ENABLE ROW LEVEL SECURITY;

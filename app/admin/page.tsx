@@ -5,9 +5,12 @@ import { useState } from 'react'
 type Rsvp = {
   id: string
   name: string
+  email: string
+  phone: string | null
   attending: boolean
-  plus_one_name: string | null
+  plus_one: boolean | null
   dietary_needs: string | null
+  message: string | null
   created_at: string
 }
 
@@ -51,7 +54,7 @@ export default function AdminPage() {
   const notAttendingCount = rsvps.filter(r => !r.attending).length
   const totalGuests = rsvps.reduce((sum, r) => {
     if (r.attending) {
-      return sum + 1 + (r.plus_one_name ? 1 : 0)
+      return sum + 1 + (r.plus_one === true ? 1 : 0)
     }
     return sum
   }, 0)
@@ -124,13 +127,22 @@ export default function AdminPage() {
                     Name
                   </th>
                   <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
+                    Email
+                  </th>
+                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
+                    Phone
+                  </th>
+                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Attending
                   </th>
                   <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Plus One
                   </th>
                   <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
-                    Dietary Needs
+                    Dietary
+                  </th>
+                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
+                    Message
                   </th>
                   <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Submitted
@@ -140,8 +152,14 @@ export default function AdminPage() {
               <tbody className="bg-white divide-y divide-gray-200">
                 {rsvps.map((rsvp) => (
                   <tr key={rsvp.id}>
-                    <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-900">
+                    <td className="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900">
                       {rsvp.name}
+                    </td>
+                    <td className="px-4 py-3 text-sm text-gray-900">
+                      {rsvp.email}
+                    </td>
+                    <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-900">
+                      {rsvp.phone || '-'}
                     </td>
                     <td className="px-4 py-3 whitespace-nowrap text-sm">
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${
@@ -152,11 +170,20 @@ export default function AdminPage() {
                         {rsvp.attending ? 'Yes' : 'No'}
                       </span>
                     </td>
-                    <td className="px-4 py-3 text-sm text-gray-900">
-                      {rsvp.plus_one_name || '-'}
+                    <td className="px-4 py-3 whitespace-nowrap text-sm">
+                      {rsvp.plus_one === true ? (
+                        <span className="px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">Yes</span>
+                      ) : rsvp.plus_one === false ? (
+                        <span className="px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">No</span>
+                      ) : (
+                        '-'
+                      )}
                     </td>
                     <td className="px-4 py-3 text-sm text-gray-900">
                       {rsvp.dietary_needs || '-'}
+                    </td>
+                    <td className="px-4 py-3 text-sm text-gray-900 max-w-xs truncate" title={rsvp.message || ''}>
+                      {rsvp.message || '-'}
                     </td>
                     <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-500">
                       {new Date(rsvp.created_at).toLocaleDateString()}
