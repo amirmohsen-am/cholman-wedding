@@ -32,20 +32,6 @@ export default function Home() {
         <section className="py-16 px-4">
           <div className="max-w-5xl mx-auto relative z-10">
             <div className="relative p-4 md:p-8 bg-white/50 backdrop-blur-sm rounded-2xl shadow-2xl">
-              <div className="absolute -top-4 -left-4 w-32 h-32">
-                <svg viewBox="0 0 100 100" className="w-full h-full opacity-50">
-                  <circle cx="50" cy="50" r="20" fill="#d97706" />
-                  <circle cx="65" cy="45" r="15" fill="#dc2626" />
-                  <circle cx="60" cy="60" r="15" fill="#059669" />
-                </svg>
-              </div>
-              <div className="absolute -bottom-4 -right-4 w-32 h-32">
-                <svg viewBox="0 0 100 100" className="w-full h-full opacity-50">
-                  <circle cx="50" cy="50" r="20" fill="#84cc16" />
-                  <circle cx="35" cy="55" r="15" fill="#d97706" />
-                  <circle cx="40" cy="40" r="15" fill="#ea580c" />
-                </svg>
-              </div>
               <Image src="/pics/pic1.png" alt="Wedding photo 1" width={1920} height={1080} className="w-full h-auto rounded-lg" priority />
             </div>
           </div>
@@ -65,20 +51,6 @@ export default function Home() {
         <section className="py-16 px-4">
           <div className="max-w-5xl mx-auto">
             <div className="relative p-4 md:p-8 bg-white/50 backdrop-blur-sm rounded-2xl shadow-2xl">
-              <div className="absolute -top-4 -right-4 w-32 h-32">
-                <svg viewBox="0 0 100 100" className="w-full h-full opacity-50">
-                  <circle cx="50" cy="50" r="20" fill="#dc2626" />
-                  <circle cx="35" cy="45" r="15" fill="#d97706" />
-                  <circle cx="40" cy="60" r="15" fill="#84cc16" />
-                </svg>
-              </div>
-              <div className="absolute -bottom-4 -left-4 w-32 h-32">
-                <svg viewBox="0 0 100 100" className="w-full h-full opacity-50">
-                  <circle cx="50" cy="50" r="20" fill="#059669" />
-                  <circle cx="65" cy="55" r="15" fill="#ea580c" />
-                  <circle cx="60" cy="40" r="15" fill="#fbbf24" />
-                </svg>
-              </div>
               <Image src="/pics/pic2.png" alt="Wedding photo 2" width={1920} height={1080} className="w-full h-auto rounded-lg" />
             </div>
           </div>
