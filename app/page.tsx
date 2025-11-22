@@ -1,6 +1,7 @@
 import RsvpForm from './components/RsvpForm'
 import Image from "next/image"
 import FloralBackground from './components/FloralBackground'
+import AddToCalendar from './components/AddToCalendar'
 
 export default function Home() {
   return (
@@ -48,6 +49,11 @@ export default function Home() {
               Please RSVP
             </h2>
             <RsvpForm />
+
+            {/* Add to Calendar Button */}
+            <div className="mt-12 flex justify-center">
+              <AddToCalendar />
+            </div>
           </div>
         </section>
 
