@@ -12,9 +12,10 @@ const CONFIG = {
   STATIC_OPACITY_RANGE: { min: 0.4, max: 0.6 },
   GROW_OPACITY_RANGE: { min: 0.5, max: 0.7 },
   SCROLL_TRIGGER_START: 10,
-  SCROLL_TRIGGER_END: 50,
-  MIN_DISTANCE: 8, // Minimum distance between flowers (in percentage)
+  SCROLL_TRIGGER_END: 80,
   POSITION_MARGIN: 5, // Margin from edges (in percentage)
+  GRID_COLS: 6, // Number of columns in grid
+  GRID_ROWS: 6, // Number of rows in grid
 }
 
 // Utility functions
@@ -22,46 +23,58 @@ const random = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 const randomFloat = (min, max, decimals = 2) =>
   parseFloat((Math.random() * (max - min) + min).toFixed(decimals));
 
-const getDistance = (x1, y1, x2, y2) => {
-  return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
-};
+const randomChoice = (array) => array[Math.floor(Math.random() * array.length)];
 
-const generateUniquePosition = (existingPositions) => {
-  const maxAttempts = 100;
-  let attempts = 0;
+// Grid-based distribution for even spacing
+const createGrid = () => {
+  const totalFlowers = CONFIG.STATIC_FLOWER_COUNT + CONFIG.GROW_FLOWER_COUNT;
+  const zones = [];
 
-  while (attempts < maxAttempts) {
-    const x = random(CONFIG.POSITION_MARGIN, 100 - CONFIG.POSITION_MARGIN);
-    const y = random(CONFIG.POSITION_MARGIN, 100 - CONFIG.POSITION_MARGIN);
+  const usableWidth = 100 - (2 * CONFIG.POSITION_MARGIN);
+  const usableHeight = 100 - (2 * CONFIG.POSITION_MARGIN);
 
-    // Check if position is far enough from all existing positions
-    const isFarEnough = existingPositions.every(pos =>
-      getDistance(x, y, pos.x, pos.y) >= CONFIG.MIN_DISTANCE
-    );
+  const zoneWidth = usableWidth / CONFIG.GRID_COLS;
+  const zoneHeight = usableHeight / CONFIG.GRID_ROWS;
 
-    if (isFarEnough) {
-      return { x, y };
+  // Create all zones
+  for (let row = 0; row < CONFIG.GRID_ROWS; row++) {
+    for (let col = 0; col < CONFIG.GRID_COLS; col++) {
+      zones.push({
+        minX: CONFIG.POSITION_MARGIN + (col * zoneWidth),
+        maxX: CONFIG.POSITION_MARGIN + ((col + 1) * zoneWidth),
+        minY: CONFIG.POSITION_MARGIN + (row * zoneHeight),
+        maxY: CONFIG.POSITION_MARGIN + ((row + 1) * zoneHeight),
+      });
     }
-
-    attempts++;
   }
 
-  // If we can't find a unique position, return a random one
+  return zones;
+};
+
+const generatePositionInZone = (zone) => {
+  // Generate position within zone with some padding from zone edges
+  const zonePadding = 2;
   return {
-    x: random(CONFIG.POSITION_MARGIN, 100 - CONFIG.POSITION_MARGIN),
-    y: random(CONFIG.POSITION_MARGIN, 100 - CONFIG.POSITION_MARGIN),
+    x: random(Math.ceil(zone.minX + zonePadding), Math.floor(zone.maxX - zonePadding)),
+    y: random(Math.ceil(zone.minY + zonePadding), Math.floor(zone.maxY - zonePadding)),
   };
 };
 
 const generateFlowers = () => {
   const flowers = [];
-  const existingPositions = [];
+  const zones = createGrid();
+  const availableZones = [...zones];
+
   const animationDelays = ['0s', '1s', '2s', '3s', '4s', '5s', '6s', '7s'];
+  const swayAnimations = ['animate-sway', 'animate-sway-gentle', 'animate-float-subtle'];
+
+  // Shuffle zones for random distribution
+  availableZones.sort(() => Math.random() - 0.5);
 
   // Generate static flowers
   for (let i = 0; i < CONFIG.STATIC_FLOWER_COUNT; i++) {
-    const position = generateUniquePosition(existingPositions);
-    existingPositions.push(position);
+    const zone = availableZones.pop();
+    const position = generatePositionInZone(zone);
 
     const flower = {
       id: i + 1,
@@ -71,7 +84,7 @@ const generateFlowers = () => {
       rotation: random(-45, 45),
       opacity: randomFloat(CONFIG.STATIC_OPACITY_RANGE.min, CONFIG.STATIC_OPACITY_RANGE.max),
       type: 'static',
-      animation: 'animate-float-subtle',
+      animation: randomChoice(swayAnimations),
       delay: animationDelays[i % animationDelays.length],
       scrollTrigger: 0,
       imageNum: (i % 12) + 1,
@@ -85,8 +98,8 @@ const generateFlowers = () => {
   const growDelays = ['0s', '0.2s', '0.3s', '0.4s', '0.5s', '0.6s', '0.7s'];
 
   for (let i = 0; i < CONFIG.GROW_FLOWER_COUNT; i++) {
-    const position = generateUniquePosition(existingPositions);
-    existingPositions.push(position);
+    const zone = availableZones.pop();
+    const position = generatePositionInZone(zone);
 
     const scrollTrigger = Math.round(CONFIG.SCROLL_TRIGGER_START + (scrollTriggerStep * i));
 
@@ -98,7 +111,7 @@ const generateFlowers = () => {
       rotation: random(-45, 45),
       opacity: randomFloat(CONFIG.GROW_OPACITY_RANGE.min, CONFIG.GROW_OPACITY_RANGE.max),
       type: 'grow',
-      animation: '',
+      animation: randomChoice(swayAnimations),
       delay: growDelays[i % growDelays.length],
       scrollTrigger,
       imageNum: (i % 12) + 1,
@@ -117,9 +130,10 @@ const formatFlowerObject = (flower) => {
 const updateFlowersInFile = () => {
   const filePath = path.join(__dirname, '..', 'app', 'components', 'FloralBackground.tsx');
 
-  console.log('🌸 Randomizing flower positions...');
+  console.log('🌸 Randomizing flower positions with grid distribution...');
   console.log(`   Static flowers: ${CONFIG.STATIC_FLOWER_COUNT}`);
   console.log(`   Grow flowers: ${CONFIG.GROW_FLOWER_COUNT}`);
+  console.log(`   Grid: ${CONFIG.GRID_COLS}x${CONFIG.GRID_ROWS} (${CONFIG.GRID_COLS * CONFIG.GRID_ROWS} zones)`);
 
   // Read the file
   let fileContent = fs.readFileSync(filePath, 'utf8');
