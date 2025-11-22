@@ -9,13 +9,13 @@ const CONFIG = {
   GROW_FLOWER_COUNT: 24,
   STATIC_SIZE_RANGE: { min: 85, max: 110 },
   GROW_SIZE_RANGE: { min: 120, max: 150 },
-  STATIC_OPACITY_RANGE: { min: 0.25, max: 0.35 },
-  GROW_OPACITY_RANGE: { min: 0.40, max: 0.60 },
+  STATIC_OPACITY_RANGE: { min: 0.4, max: 0.6 },
+  GROW_OPACITY_RANGE: { min: 0.5, max: 0.7 },
   SCROLL_TRIGGER_START: 10,
   SCROLL_TRIGGER_END: 50,
   MIN_DISTANCE: 8, // Minimum distance between flowers (in percentage)
   POSITION_MARGIN: 5, // Margin from edges (in percentage)
-};
+}
 
 // Utility functions
 const random = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
