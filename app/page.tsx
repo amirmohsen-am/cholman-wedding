@@ -1,11 +1,15 @@
 import RsvpForm from './components/RsvpForm'
 import Image from "next/image"
+import FloralBackground from './components/FloralBackground'
 
 export default function Home() {
   return (
     <div className="relative">
       {/* Scrollable Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-amber-100 via-rose-200 via-emerald-100 via-amber-200 via-rose-100 via-emerald-200 to-amber-100"></div>
+
+      {/* Animated Floral Background */}
+      <FloralBackground />
 
       {/* Scrollable Content Layer */}
       <div className="relative z-10">
