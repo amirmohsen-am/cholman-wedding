@@ -42,3 +42,68 @@ body {
   background-size: 200% 200%;
   animation: gradient-shift 15s ease infinite;
 }
+
+/* Floral Animations */
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(10px, -15px) rotate(2deg);
+  }
+  50% {
+    transform: translate(-5px, -25px) rotate(-1deg);
+  }
+  75% {
+    transform: translate(-15px, -10px) rotate(1deg);
+  }
+}
+
+@keyframes bloom {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.5;
+  }
+}
+
+@keyframes float-bloom {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  33% {
+    transform: translate(15px, -20px) scale(1.1);
+    opacity: 0.4;
+  }
+  66% {
+    transform: translate(-10px, -15px) scale(1.15);
+    opacity: 0.5;
+  }
+}
+
+/* Animation Classes */
+.animate-float {
+  animation: float-gentle 12s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-bloom {
+  animation: bloom 10s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.animate-float-bloom {
+  animation: float-bloom 14s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* Staggered delays for natural feel */
+.delay-1 { animation-delay: 0s; }
+.delay-2 { animation-delay: 2s; }
+.delay-3 { animation-delay: 4s; }
+.delay-4 { animation-delay: 6s; }
+.delay-5 { animation-delay: 8s; }

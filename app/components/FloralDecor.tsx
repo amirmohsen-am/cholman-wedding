@@ -1,3 +1,5 @@
+import { DelicateFlower, LayeredBloom, BotanicalBranch, FloralCluster } from './FloralSVGs'
+
 export function FloralCorner({ position = 'top-left', className = '' }: { position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right', className?: string }) {
   const positionClasses = {
     'top-left': 'top-0 left-0',
@@ -7,35 +9,36 @@ export function FloralCorner({ position = 'top-left', className = '' }: { positi
   }
 
   return (
-    <div className={`absolute ${positionClasses[position]} w-48 md:w-64 h-48 md:h-64 opacity-30 ${className}`}>
+    <div className={`absolute ${positionClasses[position]} w-48 md:w-64 h-48 md:h-64 opacity-40 ${className}`}>
       <svg viewBox="0 0 200 200" className="w-full h-full" fill="none">
-        {/* Large flower */}
-        <circle cx="50" cy="50" r="20" fill="#d97706" opacity="0.6"/>
-        <circle cx="70" cy="45" r="18" fill="#dc2626" opacity="0.5"/>
-        <circle cx="65" cy="65" r="18" fill="#059669" opacity="0.5"/>
-        <circle cx="45" cy="70" r="18" fill="#ea580c" opacity="0.5"/>
-        <circle cx="35" cy="50" r="18" fill="#84cc16" opacity="0.5"/>
-        <circle cx="50" cy="35" r="18" fill="#fbbf24" opacity="0.5"/>
-        <circle cx="50" cy="50" r="12" fill="#78350f" opacity="0.7"/>
+        {/* Large flower cluster - top left area */}
+        <g transform="translate(10, 10)" className="animate-bloom delay-1">
+          <FloralCluster className="w-24 h-24" />
+        </g>
 
-        {/* Medium flowers */}
-        <circle cx="100" cy="30" r="15" fill="#d97706" opacity="0.5"/>
-        <circle cx="115" cy="28" r="12" fill="#dc2626" opacity="0.4"/>
-        <circle cx="110" cy="42" r="12" fill="#059669" opacity="0.4"/>
-        <circle cx="92" cy="42" r="12" fill="#ea580c" opacity="0.4"/>
-        <circle cx="88" cy="30" r="12" fill="#84cc16" opacity="0.4"/>
-        <circle cx="100" cy="22" r="12" fill="#fbbf24" opacity="0.4"/>
+        {/* Layered bloom - middle */}
+        <g transform="translate(85, 55)" className="animate-float-bloom delay-3">
+          <LayeredBloom className="w-20 h-20" />
+        </g>
 
-        {/* Small flowers scattered */}
-        <circle cx="140" cy="60" r="10" fill="#d97706" opacity="0.4"/>
-        <circle cx="145" cy="70" r="8" fill="#dc2626" opacity="0.3"/>
-        <circle cx="30" cy="100" r="10" fill="#059669" opacity="0.4"/>
-        <circle cx="25" cy="110" r="8" fill="#ea580c" opacity="0.3"/>
+        {/* Delicate flower - smaller accent */}
+        <g transform="translate(130, 20)" className="animate-float delay-2">
+          <DelicateFlower className="w-16 h-16" />
+        </g>
 
-        {/* Leaves/stems */}
-        <ellipse cx="75" cy="80" rx="5" ry="25" fill="#059669" opacity="0.4" transform="rotate(-30 75 80)"/>
-        <ellipse cx="120" cy="50" rx="5" ry="20" fill="#84cc16" opacity="0.3" transform="rotate(45 120 50)"/>
-        <ellipse cx="50" cy="120" rx="4" ry="18" fill="#16a34a" opacity="0.3" transform="rotate(-60 50 120)"/>
+        {/* Botanical branch - flowing across */}
+        <g transform="translate(30, 80) rotate(-20)" className="animate-float delay-4">
+          <BotanicalBranch className="w-28 h-28" />
+        </g>
+
+        {/* Additional delicate flowers scattered */}
+        <g transform="translate(140, 100)" className="animate-bloom delay-5">
+          <DelicateFlower className="w-14 h-14" />
+        </g>
+
+        <g transform="translate(155, 135)" className="animate-float-bloom delay-2">
+          <DelicateFlower className="w-12 h-12" />
+        </g>
       </svg>
     </div>
   )
@@ -43,21 +46,23 @@ export function FloralCorner({ position = 'top-left', className = '' }: { positi
 
 export function FloralBorder({ className = '' }: { className?: string }) {
   return (
-    <div className={`w-full h-16 opacity-40 ${className}`}>
-      <svg viewBox="0 0 800 80" className="w-full h-full" fill="none" preserveAspectRatio="none">
+    <div className={`w-full h-20 opacity-50 ${className}`}>
+      <svg viewBox="0 0 800 100" className="w-full h-full" fill="none" preserveAspectRatio="none">
         <g>
-          {[...Array(8)].map((_, i) => (
-            <g key={i} transform={`translate(${i * 100}, 0)`}>
-              <circle cx="50" cy="40" r="12" fill="#d97706" opacity="0.6"/>
-              <circle cx="62" cy="37" r="10" fill="#dc2626" opacity="0.5"/>
-              <circle cx="60" cy="48" r="10" fill="#059669" opacity="0.5"/>
-              <circle cx="42" cy="48" r="10" fill="#ea580c" opacity="0.5"/>
-              <circle cx="38" cy="40" r="10" fill="#84cc16" opacity="0.5"/>
-              <circle cx="50" cy="32" r="10" fill="#fbbf24" opacity="0.5"/>
-              <ellipse cx="50" cy="55" rx="3" ry="15" fill="#059669" opacity="0.4"/>
-              <ellipse cx="65" cy="55" rx="3" ry="12" fill="#16a34a" opacity="0.3"/>
-            </g>
-          ))}
+          {[...Array(6)].map((_, i) => {
+            const delays = ['delay-1', 'delay-2', 'delay-3', 'delay-4', 'delay-5', 'delay-1'];
+            const animations = ['animate-bloom', 'animate-float', 'animate-float-bloom'];
+            const flowers = [DelicateFlower, LayeredBloom, FloralCluster, DelicateFlower, BotanicalBranch, LayeredBloom];
+            const FlowerComponent = flowers[i];
+
+            return (
+              <g key={i} transform={`translate(${i * 133 + 50}, 50) scale(0.8)`} className={`${animations[i % 3]} ${delays[i]}`}>
+                <g transform="translate(-50, -50)">
+                  <FlowerComponent className="w-24 h-24" />
+                </g>
+              </g>
+            )
+          })}
         </g>
       </svg>
     </div>
