@@ -5,13 +5,11 @@ import { FloralCorner, FloralBorder } from './components/FloralDecor'
 export default function Home() {
   return (
     <div className="relative">
-      {/* Fixed Background Layer with Scroll-Based Gradient & Animated Florals */}
-      <div className="fixed inset-0 overflow-hidden">
-        {/* Tall gradient that transitions as you scroll */}
-        <div className="absolute inset-0 bg-gradient-to-b from-amber-100 via-rose-200 via-emerald-100 via-amber-200 via-rose-100 via-emerald-200 to-amber-100"
-             style={{ height: '600vh' }}></div>
+      {/* Scrollable Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-amber-100 via-rose-200 via-emerald-100 via-amber-200 via-rose-100 via-emerald-200 to-amber-100"></div>
 
-        {/* Animated Florals - Fixed in different positions */}
+      {/* Fixed Florals Layer */}
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         <FloralCorner position="top-left" className="opacity-50" />
         <FloralCorner position="top-right" className="opacity-40" />
         <FloralCorner position="bottom-left" className="opacity-45" />
