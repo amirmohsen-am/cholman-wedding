@@ -17,23 +17,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Second Image at Top */}
       <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto">
-          <div className="relative w-full aspect-[3/4] overflow-hidden rounded-lg">
-            <Image
-              src="/pics/IMG_6397.png"
-              alt="Photo at top"
-              fill
-              className="object-cover"
-              priority
-            />
+          <div className="relative w-full overflow-hidden rounded-lg">
+            <div className="relative w-[133%] -ml-[16.5%]">
+              <Image
+                src="/pics/IMG_6397.png"
+                alt="Photo at top"
+                width={1920}
+                height={1080}
+                className="object-contain w-full h-auto"
+                priority
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* RSVP Form Section with Coral Background */}
-      <section className="py-12 px-4 mb-12">
+      <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto bg-[#FF6F3A] rounded-lg p-8 md:p-12">
           <h2 className="text-4xl md:text-6xl font-normal text-center mb-8 text-white" style={{ fontFamily: "var(--font-sahitya)" }}>
             Please RSVP
@@ -47,7 +49,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Third Image After RSVP */}
       <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto">
           <div className="relative w-full aspect-[3/4] overflow-hidden rounded-lg">
@@ -81,15 +82,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* First Image Between Venue and Schedule */}
       <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto">
-          <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg">
+          <div className="relative w-full h-auto overflow-hidden rounded-lg">
             <Image
               src="/pics/IMG_6391.png"
               alt="Sara and Gray"
-              fill
-              className="object-cover"
+              width={1920}
+              height={1080}
+              className="object-contain w-full h-auto"
             />
           </div>
         </div>
@@ -119,6 +120,19 @@ export default function Home() {
                 <p>8pm - Second location party</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 mb-12">
+        <div className="max-w-4xl mx-auto">
+          <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg">
+            <Image
+              src="/pics/IMG_7779.png"
+              alt="Photo between schedule and dress code"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
@@ -178,26 +192,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Additional Photos Section */}
       <section className="px-4 mb-12">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg">
-              <Image
-                src="/pics/IMG_7779.png"
-                alt="Additional photo 1"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg">
-              <Image
-                src="/pics/P1010500.png"
-                alt="Additional photo 2"
-                fill
-                className="object-cover"
-              />
-            </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg">
+            <Image
+              src="/pics/P1010500.png"
+              alt="Additional photo"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
@@ -216,14 +219,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Transportation & Final Message */}
-      <section className="py-12 px-4 mb-12">
+      {/* Transportation Section */}
+      <section className="px-4 mb-12">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-[#FFE5B4] rounded-lg p-8 md:p-12 text-center">
+            <h2 className="text-4xl md:text-6xl font-normal mb-6" style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}>
+              Transportation
+            </h2>
+            <p className="text-lg md:text-2xl" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
+              Information about parking, directions, and transportation options coming soon...
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Final Message */}
+      <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-lg md:text-2xl mb-4" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
-            Run out of time to add Transportation & Registry
-          </p>
-          <p className="text-lg md:text-2xl mb-4" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
-            & We can't wait to celebrate with you
+            We can't wait to celebrate with you
           </p>
           <p className="text-lg md:text-2xl" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
             boo mooha mooha
