@@ -66,7 +66,7 @@ export default function RsvpForm() {
 
   if (submitStatus === 'success') {
     return (
-      <div className="max-w-md mx-auto p-6 bg-white/95 border-2 border-white rounded-lg shadow-lg">
+      <div className="max-w-md mx-auto p-6 bg-white/95 border-2 border-white rounded-lg shadow-2xl">
         <h3 className="text-xl font-bold text-green-800 mb-2" style={{ fontFamily: "var(--font-sahitya)" }}>Thank you!</h3>
         <p className="text-green-700" style={{ fontFamily: "var(--font-sahitya)" }}>Your RSVP has been submitted successfully.</p>
         <button
@@ -91,7 +91,7 @@ export default function RsvpForm() {
           id="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full px-4 py-3 border-2 border-white rounded-lg bg-white text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-white/50"
+          className="w-full px-4 py-3 border-2 border-white rounded-lg bg-white text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-white/50 shadow-lg"
           style={{ fontFamily: "var(--font-sahitya)" }}
           required
         />
@@ -106,7 +106,7 @@ export default function RsvpForm() {
           id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full px-4 py-3 border-2 border-white rounded-lg bg-white text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-white/50"
+          className="w-full px-4 py-3 border-2 border-white rounded-lg bg-white text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-white/50 shadow-lg"
           style={{ fontFamily: "var(--font-sahitya)" }}
           required
         />
@@ -122,7 +122,7 @@ export default function RsvpForm() {
           id="phone"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
-          className="w-full px-4 py-3 border-2 border-white rounded-lg bg-white text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-white/50"
+          className="w-full px-4 py-3 border-2 border-white rounded-lg bg-white text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-white/50 shadow-lg"
           style={{ fontFamily: "var(--font-sahitya)" }}
         />
       </div>
@@ -182,7 +182,7 @@ export default function RsvpForm() {
               id="dietary"
               value={dietaryNeeds}
               onChange={(e) => setDietaryNeeds(e.target.value)}
-              className="w-full px-4 py-3 border-2 border-white rounded-lg bg-white text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-white/50"
+              className="w-full px-4 py-3 border-2 border-white rounded-lg bg-white text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-white/50 shadow-lg"
               style={{ fontFamily: "var(--font-sahitya)" }}
               rows={3}
             />
@@ -198,7 +198,7 @@ export default function RsvpForm() {
           id="message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="w-full px-4 py-3 border-2 border-white rounded-lg bg-white text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-white/50"
+          className="w-full px-4 py-3 border-2 border-white rounded-lg bg-white text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-white/50 shadow-lg"
           style={{ fontFamily: "var(--font-sahitya)" }}
           rows={4}
           placeholder="Share anything you'd like to say to us..."
@@ -206,7 +206,7 @@ export default function RsvpForm() {
       </div>
 
       {submitStatus === "error" && errorMessage && (
-        <div className="mb-6 p-4 bg-white/95 border-2 border-white rounded-lg text-red-700 text-base font-medium" style={{ fontFamily: "var(--font-sahitya)" }}>{errorMessage}</div>
+        <div className="mb-6 p-4 bg-white/95 border-2 border-white rounded-lg text-red-700 text-base font-medium shadow-xl" style={{ fontFamily: "var(--font-sahitya)" }}>{errorMessage}</div>
       )}
 
       <button
