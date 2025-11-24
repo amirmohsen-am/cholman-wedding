@@ -12,8 +12,21 @@ export default function HeroImage() {
         const scrollY = window.scrollY
         // Parallax effect: image moves slower than scroll (0.5 = half speed)
         imageRef.current.style.transform = `translateY(${scrollY * 0.5}px)`
+
+        // Fade out effect: image fades as you scroll down
+        // Start fading immediately, fully transparent by 100px scroll
+        const opacity = Math.max(0, 1 - scrollY / 600)
+        imageRef.current.style.setProperty("opacity", opacity.toString(), "important")
       }
     }
+
+    // Set initial opacity
+    if (imageRef.current) {
+      imageRef.current.style.setProperty("opacity", "1", "important")
+    }
+
+    // Call once on mount to set initial state
+    handleScroll()
 
     window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
