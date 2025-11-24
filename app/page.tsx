@@ -1,152 +1,237 @@
 import RsvpForm from './components/RsvpForm'
 import Image from "next/image"
-import FloralBackground from './components/FloralBackground'
 import AddToCalendar from './components/AddToCalendar'
 
 export default function Home() {
   return (
-    <div className="relative">
-      {/* Scrollable Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-amber-100 via-rose-200 via-emerald-100 via-amber-200 via-rose-100 via-emerald-200 to-amber-100"></div>
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="py-12 px-4 text-center">
+        <div className="max-w-2xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-bold mb-3 text-gray-800" style={{ fontFamily: "var(--font-sahitya)" }}>
+            Sara & Gray
+          </h1>
+          <p className="text-lg md:text-xl text-gray-700" style={{ fontFamily: "var(--font-sahitya)" }}>
+            are inviting you to celebrate their love
+          </p>
+          <p className="text-lg md:text-xl text-gray-700" style={{ fontFamily: "var(--font-sahitya)" }}>
+            on September 5th at 4:20 pm
+          </p>
+        </div>
+      </section>
 
-      {/* Animated Floral Background */}
-      <FloralBackground />
+      {/* Main Couple Photo */}
+      <section className="px-4 mb-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg">
+            <Image
+              src="/pics/IMG_6391.png"
+              alt="Sara and Gray"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
+      </section>
 
-      {/* Scrollable Content Layer */}
-      <div className="relative z-10">
-        {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center px-4 py-20">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-6xl md:text-8xl font-bold mb-4 text-gray-800" style={{ fontFamily: "var(--font-crimson)" }}>
-              Sara & Gray
-            </h1>
-            <h2 className="text-3xl md:text-4xl mb-8 text-gray-700 font-semibold" style={{ fontFamily: "var(--font-crimson)" }}>
-              Cholman and the Cholman in law
-            </h2>
-            <div className="text-xl md:text-2xl text-gray-600 leading-relaxed" style={{ fontFamily: "var(--font-crimson)" }}>
-              <p className="mb-2">Hala dasta bala</p>
-              <p className="mb-2">Bian bezanim dasta ro bala</p>
-              <p className="mb-2">too joob beja</p>
-              <p className="mb-2">bokonim hava</p>
-              <p>boos bedim be shoma</p>
+      {/* Two Photos Grid */}
+      <section className="px-4 mb-12">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Left Photo */}
+            <div className="relative w-full aspect-[3/4] overflow-hidden rounded-lg">
+              <Image
+                src="/pics/IMG_6397.png"
+                alt="Photo 1"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            {/* Right Photo */}
+            <div className="relative w-full aspect-[3/4] overflow-hidden rounded-lg">
+              <Image
+                src="/pics/IMG_6416.png"
+                alt="Photo 2"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Photo Section 1 */}
-        <section className="py-16 px-4">
-          <div className="max-w-5xl mx-auto relative z-10">
-            <div className="relative p-4 md:p-8 bg-white/50 backdrop-blur-sm rounded-2xl shadow-2xl">
-              <Image src="/pics/pic1.png" alt="Wedding photo 1" width={1920} height={1080} className="w-full h-auto rounded-lg" priority />
-            </div>
+      {/* RSVP Form Section with Orange Background */}
+      <section className="py-12 px-4 mb-12">
+        <div className="max-w-4xl mx-auto bg-[#FF6B4A] rounded-lg p-8 md:p-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 text-white" style={{ fontFamily: "var(--font-sahitya)" }}>
+            Please RSVP
+          </h2>
+          <RsvpForm />
+
+          {/* Add to Calendar Button */}
+          <div className="mt-8 flex justify-center">
+            <AddToCalendar />
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* RSVP Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-5xl md:text-6xl font-bold text-center mb-4 text-gray-800" style={{ fontFamily: "var(--font-crimson)" }}>
-              Please RSVP
-            </h2>
-            <RsvpForm />
-
-            {/* Add to Calendar Button */}
-            <div className="mt-12 flex justify-center">
-              <AddToCalendar />
-            </div>
-          </div>
-        </section>
-
-        {/* Photo Section 2 */}
-        <section className="py-16 px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="relative p-4 md:p-8 bg-white/50 backdrop-blur-sm rounded-2xl shadow-2xl">
-              <Image src="/pics/pic2.png" alt="Wedding photo 2" width={1920} height={1080} className="w-full h-auto rounded-lg" />
-            </div>
-          </div>
-        </section>
-
-        {/* Venue Information */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-5xl md:text-6xl font-bold text-center mb-4 text-gray-800" style={{ fontFamily: "var(--font-crimson)" }}>
+      {/* Venue Section */}
+      <section className="px-4 mb-12">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-[#C5D86D] rounded-lg p-8 md:p-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800" style={{ fontFamily: "var(--font-sahitya)" }}>
               Venue
             </h2>
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-8 text-center">
-              <p className="text-2xl font-semibold text-gray-800 mb-4">[Venue Name]</p>
-              <p className="text-lg text-gray-700 mb-2">[Address Line 1]</p>
-              <p className="text-lg text-gray-700 mb-4">[City, State ZIP]</p>
-              <p className="text-gray-600">[Add any special venue notes or directions here]</p>
-            </div>
+            <p className="text-xl md:text-2xl font-semibold text-gray-800 mb-2" style={{ fontFamily: "var(--font-sahitya)" }}>
+              Patapsco Valley State Park - Hollofield Area, Unit 320
+            </p>
+            <p className="text-lg text-gray-700 mb-6" style={{ fontFamily: "var(--font-sahitya)" }}>
+              8020 Baltimore National Pike, Ellicott City, MD 21043
+            </p>
+            <p className="text-base text-gray-700" style={{ fontFamily: "var(--font-sahitya)" }}>
+              Special notes TBA...
+            </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Schedule */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-5xl md:text-6xl font-bold text-center mb-12 text-gray-800" style={{ fontFamily: "var(--font-crimson)" }}>
+      {/* Schedule Section */}
+      <section className="px-4 mb-12">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-[#D4A5A5] rounded-lg p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-800" style={{ fontFamily: "var(--font-sahitya)" }}>
               Schedule
             </h2>
-            <div className="space-y-6">
-              <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-md p-6">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-2">Ceremony</h3>
-                <p className="text-lg text-gray-700">[Time] - [Location]</p>
+            <div className="space-y-4 text-gray-800" style={{ fontFamily: "var(--font-sahitya)" }}>
+              <div className="flex justify-between items-center border-b border-gray-700 pb-2">
+                <span className="text-lg">12pm - Arrive & social hour</span>
               </div>
-              <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-md p-6">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-2">Cocktail Hour</h3>
-                <p className="text-lg text-gray-700">[Time] - [Location]</p>
+              <div className="flex justify-between items-center border-b border-gray-700 pb-2">
+                <span className="text-lg">1pm - Ceremony</span>
               </div>
-              <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-md p-6">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-2">Reception</h3>
-                <p className="text-lg text-gray-700">[Time] - [Location]</p>
+              <div className="flex justify-between items-center border-b border-gray-700 pb-2">
+                <span className="text-lg">2pm - Lunch, speeches, vibe time</span>
+              </div>
+              <div className="flex justify-between items-center border-b border-gray-700 pb-2">
+                <span className="text-lg">5pm - Wrap up at the park</span>
+              </div>
+              <div className="flex justify-between items-center pb-2">
+                <span className="text-lg">8pm - Second location party</span>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Transportation */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-5xl md:text-6xl font-bold text-center mb-12 text-gray-800" style={{ fontFamily: "var(--font-crimson)" }}>
-              Transportation
-            </h2>
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-8">
-              <p className="text-lg text-gray-700 mb-4">[Add parking information, shuttle services, public transportation options, etc.]</p>
-              <p className="text-gray-600">[Any additional transportation notes]</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Dress Code */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-5xl md:text-6xl font-bold mb-8 text-gray-800" style={{ fontFamily: "var(--font-crimson)" }}>
+      {/* Dress Code Section */}
+      <section className="px-4 mb-12">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-lg p-8 md:p-12 shadow-lg">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-gray-800" style={{ fontFamily: "var(--font-sahitya)" }}>
               Dress Code
             </h2>
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-8">
-              <p className="text-2xl font-semibold text-gray-800 mb-4">[Dress Code Type]</p>
-              <p className="text-lg text-gray-700">[Description of what guests should wear]</p>
+            <div className="text-center mb-8">
+              <p className="text-lg text-gray-700 mb-6" style={{ fontFamily: "var(--font-sahitya)" }}>
+                Feeling cute, we counted on you to wear something fun or saying in case you didn't know this was a picnic style wedding so that's nice and chill it's outside so shoes won't be outside — we recommend shoes you'll feel comfortable walking on grass/dirt in. Early spring like vibe so the day typically has cool spring like weather, with a 20% average chance of precipitation, and average daytime high temperature around 41 F and low temp around 27 F. We recommend layers!
+              </p>
+              <p className="text-base text-gray-600 italic" style={{ fontFamily: "var(--font-sahitya)" }}>
+                If possible, please use our color palette to inspire your outfit :)
+              </p>
+            </div>
+
+            {/* Color Palette Flowers */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="relative w-full aspect-square overflow-hidden rounded-lg">
+                <Image
+                  src="/pics/IMG_7683.png"
+                  alt="Flower arrangement 1"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative w-full aspect-square overflow-hidden rounded-lg">
+                <Image
+                  src="/pics/IMG_7684.png"
+                  alt="Flower arrangement 2"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative w-full aspect-square overflow-hidden rounded-lg">
+                <Image
+                  src="/pics/IMG_7685.png"
+                  alt="Flower arrangement 3"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative w-full aspect-square overflow-hidden rounded-lg">
+                <Image
+                  src="/pics/IMG_7688.png"
+                  alt="Flower arrangement 4"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Gift Reminder */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-amber-50 border-4 border-amber-600 rounded-2xl shadow-2xl p-8 md:p-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-amber-900" style={{ fontFamily: "var(--font-crimson)" }}>
-                REMEMBER TO BRING GIFTS FOR SARA'S BROTHER
-              </h2>
-              <p className="text-lg text-amber-800">[Add any additional details about gifts here]</p>
+      {/* Additional Photos Section */}
+      <section className="px-4 mb-12">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg">
+              <Image
+                src="/pics/IMG_7779.png"
+                alt="Additional photo 1"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg">
+              <Image
+                src="/pics/P1010500.png"
+                alt="Additional photo 2"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Footer */}
-        <section className="py-12 px-4 text-center">
-          <p className="text-gray-700 text-lg">We can't wait to celebrate with you!</p>
-        </section>
-      </div>
+      {/* Wildflower Photos Section */}
+      <section className="px-4 mb-12">
+        <div className="max-w-6xl mx-auto">
+          <div className="relative w-full aspect-[21/9] overflow-hidden rounded-lg">
+            <Image
+              src="/pics/image.png"
+              alt="Wildflower field"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Transportation & Final Message */}
+      <section className="py-12 px-4 mb-12">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-lg text-gray-700 mb-4" style={{ fontFamily: "var(--font-sahitya)" }}>
+            Run out of time to add Transportation & Registry
+          </p>
+          <p className="text-lg text-gray-700 mb-4" style={{ fontFamily: "var(--font-sahitya)" }}>
+            & We can't wait to celebrate with you
+          </p>
+          <p className="text-lg text-gray-700" style={{ fontFamily: "var(--font-sahitya)" }}>
+            boo mooha mooha
+          </p>
+        </div>
+      </section>
     </div>
   )
 }

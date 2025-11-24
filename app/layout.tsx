@@ -11,7 +11,8 @@ import {
   Montserrat,
   Raleway,
   Libre_Baskerville,
-  Yeseva_One
+  Yeseva_One,
+  Sahitya
 } from "next/font/google";
 import "./globals.css";
 
@@ -91,6 +92,12 @@ const yesevaOne = Yeseva_One({
   weight: ["400"],
 });
 
+const sahitya = Sahitya({
+  variable: "--font-sahitya",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
 export const metadata: Metadata = {
   title: "Cholman Wedding RSVP",
   description: "Wedding RSVP",
@@ -104,8 +111,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfair.variable} ${cormorant.variable} ${crimson.variable} ${libreBaskerville.variable} ${dancing.variable} ${greatVibes.variable} ${allura.variable} ${satisfy.variable} ${lato.variable} ${montserrat.variable} ${raleway.variable} ${yesevaOne.variable} antialiased font-sans`}
-        style={{ fontFamily: 'var(--font-lato)' }}
+        className={`${playfair.variable} ${cormorant.variable} ${crimson.variable} ${libreBaskerville.variable} ${dancing.variable} ${greatVibes.variable} ${allura.variable} ${satisfy.variable} ${lato.variable} ${montserrat.variable} ${raleway.variable} ${yesevaOne.variable} ${sahitya.variable} antialiased font-sans`}
+        style={{ fontFamily: 'var(--font-sahitya)' }}
       >
         {children}
       </body>
