@@ -1,43 +1,18 @@
 import RsvpForm from './components/RsvpForm'
 import Image from "next/image"
 import AddToCalendar from './components/AddToCalendar'
+import HeroImage from './components/HeroImage'
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-12 px-4 text-center">
-        <div className="max-w-2xl mx-auto">
-          <h1 className="text-6xl md:text-8xl font-normal mb-6" style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}>
-            Sara & Gray
-          </h1>
-          <p className="text-xl md:text-3xl" style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}>
-            are inviting you to celebrate their love on Saturday, April 11th, 2026
-          </p>
-        </div>
-      </section>
-
-      <section className="px-4 mb-12">
-        <div className="max-w-4xl mx-auto">
-          <div className="relative w-full overflow-hidden rounded-lg">
-            <div className="relative w-[133%] -ml-[16.5%]">
-              <Image
-                src="/pics/IMG_6397.png"
-                alt="Photo at top"
-                width={1920}
-                height={1080}
-                className="object-contain w-full h-auto"
-                priority
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroImage />
 
       {/* RSVP Form Section with Coral Background */}
       <section className="px-4 mb-12">
-        <div className="max-w-4xl mx-auto bg-[#FF6F3A] rounded-lg p-8 md:p-12">
-          <h2 className="text-4xl md:text-6xl font-normal text-center mb-8 text-white" style={{ fontFamily: "var(--font-sahitya)" }}>
+        <div className="max-w-4xl mx-auto bg-[#FF6F3A] rounded-lg p-6 md:p-8">
+          <h2 className="text-4xl md:text-6xl font-normal text-center mb-12 text-white" style={{ fontFamily: "var(--font-sahitya)" }}>
             Please RSVP
           </h2>
           <RsvpForm />
@@ -60,7 +35,7 @@ export default function Home() {
       {/* Venue Section */}
       <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-[#CCDB69] rounded-lg p-8 md:p-12 text-center">
+          <div className="bg-[#CCDB69] rounded-lg p-6 md:p-8 text-center">
             <h2 className="text-4xl md:text-6xl font-normal mb-6" style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}>
               Venue
             </h2>
@@ -88,7 +63,7 @@ export default function Home() {
       {/* Schedule Section */}
       <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-[#DDB3AA] rounded-lg p-8 md:p-12">
+          <div className="bg-[#DDB3AA] rounded-lg p-6 md:p-8">
             <h2
               className="text-4xl md:text-6xl font-normal text-center mb-8"
               style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}
@@ -127,7 +102,7 @@ export default function Home() {
       {/* Dress Code Section */}
       <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-[#C1DBFD] rounded-lg p-8 md:p-12 shadow-lg">
+          <div className="bg-[#C1DBFD] rounded-lg p-6 md:p-8 shadow-lg">
             <h2
               className="text-4xl md:text-6xl font-normal text-center mb-6"
               style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}
@@ -157,7 +132,7 @@ export default function Home() {
             </div>
 
             {/* Color Palette Swatches - All Rows Scroll Together */}
-            <div className="bg-white rounded-lg p-6 shadow-lg mb-8">
+            <div className="bg-white rounded-lg p-3 shadow-lg mb-8">
               <div className="overflow-x-auto scrollbar-thin">
                 <div className="space-y-3 min-w-max">
                   {/* Row 1 - Dark Shades */}
@@ -229,7 +204,7 @@ export default function Home() {
       {/* Transportation Section */}
       <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-[#FFE5B4] rounded-lg p-8 md:p-12 text-center">
+          <div className="bg-[#FFE5B4] rounded-lg p-6 md:p-8 text-center">
             <h2 className="text-4xl md:text-6xl font-normal mb-6" style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}>
               Transportation
             </h2>
