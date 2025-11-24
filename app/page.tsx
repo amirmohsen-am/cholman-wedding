@@ -62,9 +62,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* RSVP Form Section with Orange Background */}
+      {/* RSVP Form Section with Coral Background */}
       <section className="py-12 px-4 mb-12">
-        <div className="max-w-4xl mx-auto bg-[#FF6B4A] rounded-lg p-8 md:p-12">
+        <div className="max-w-4xl mx-auto bg-[#FF6F3A] rounded-lg p-8 md:p-12">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 text-white" style={{ fontFamily: "var(--font-sahitya)" }}>
             Please RSVP
           </h2>

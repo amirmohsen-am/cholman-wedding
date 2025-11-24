@@ -16,7 +16,7 @@ export default function AddToCalendar() {
     <button
       onClick={handleDownload}
       disabled={isDownloading}
-      className="bg-white text-[#FF6B4A] px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100 active:scale-95 transition-all border-2 border-white flex items-center gap-2 text-base font-bold disabled:opacity-50 disabled:cursor-not-allowed"
+      className="bg-white text-[#E85D3F] px-6 py-4 rounded-lg shadow-lg hover:bg-gray-50 active:scale-95 transition-all border-2 border-white flex items-center gap-2 text-lg font-bold disabled:opacity-50 disabled:cursor-not-allowed"
       style={{ fontFamily: "var(--font-sahitya)" }}
     >
       {isDownloading ? (
