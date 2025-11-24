@@ -12,7 +12,7 @@ export default function Home() {
             Sara & Gray
           </h1>
           <p className="text-xl md:text-3xl" style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}>
-            are inviting you to celebrate their love on September 5th at 4:20 pm
+            are inviting you to celebrate their love on Saturday, April 11th, 2026
           </p>
         </div>
       </section>
@@ -52,12 +52,7 @@ export default function Home() {
       <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto">
           <div className="relative w-full aspect-[3/4] overflow-hidden rounded-lg">
-            <Image
-              src="/pics/IMG_6416.png"
-              alt="Photo after RSVP"
-              fill
-              className="object-cover"
-            />
+            <Image src="/pics/IMG_6416.png" alt="Photo after RSVP" fill className="object-cover" />
           </div>
         </div>
       </section>
@@ -85,13 +80,7 @@ export default function Home() {
       <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto">
           <div className="relative w-full h-auto overflow-hidden rounded-lg">
-            <Image
-              src="/pics/IMG_6391.png"
-              alt="Sara and Gray"
-              width={1920}
-              height={1080}
-              className="object-contain w-full h-auto"
-            />
+            <Image src="/pics/IMG_6391.png" alt="Sara and Gray" width={1920} height={1080} className="object-contain w-full h-auto" />
           </div>
         </div>
       </section>
@@ -100,7 +89,10 @@ export default function Home() {
       <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto">
           <div className="bg-[#DDB3AA] rounded-lg p-8 md:p-12">
-            <h2 className="text-4xl md:text-6xl font-normal text-center mb-8" style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}>
+            <h2
+              className="text-4xl md:text-6xl font-normal text-center mb-8"
+              style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}
+            >
               Schedule
             </h2>
             <div className="space-y-4 text-lg md:text-2xl" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
@@ -127,12 +119,7 @@ export default function Home() {
       <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto">
           <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg">
-            <Image
-              src="/pics/IMG_7779.png"
-              alt="Photo between schedule and dress code"
-              fill
-              className="object-cover"
-            />
+            <Image src="/pics/IMG_7779.png" alt="Photo between schedule and dress code" fill className="object-cover" />
           </div>
         </div>
       </section>
@@ -141,12 +128,18 @@ export default function Home() {
       <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto">
           <div className="bg-[#C1DBFD] rounded-lg p-8 md:p-12 shadow-lg">
-            <h2 className="text-4xl md:text-6xl font-normal text-center mb-6" style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}>
+            <h2
+              className="text-4xl md:text-6xl font-normal text-center mb-6"
+              style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}
+            >
               Dress Code
             </h2>
             <div className="text-center mb-8">
               <p className="text-lg md:text-2xl mb-6" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
-                Feeling cute, we counted on you to wear something fun or saying in case you didn't know this was a picnic style wedding so that's nice and chill it's outside so shoes won't be outside — we recommend shoes you'll feel comfortable walking on grass/dirt in. Early spring like vibe so the day typically has cool spring like weather, with a 20% average chance of precipitation, and average daytime high temperature around 41 F and low temp around 27 F. We recommend layers!
+                Feeling cute, we counted on you to wear something fun or saying in case you didn't know this was a picnic style wedding so
+                that's nice and chill it's outside so shoes won't be outside — we recommend shoes you'll feel comfortable walking on
+                grass/dirt in. Early spring like vibe so the day typically has cool spring like weather, with a 20% average chance of
+                precipitation, and average daytime high temperature around 41 F and low temp around 27 F. We recommend layers!
               </p>
               <p className="text-lg md:text-xl italic" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
                 If possible, please use our color palette to inspire your outfit :)
@@ -156,36 +149,16 @@ export default function Home() {
             {/* Color Palette Flowers */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="relative w-full aspect-square overflow-hidden rounded-lg">
-                <Image
-                  src="/pics/IMG_7683.png"
-                  alt="Flower arrangement 1"
-                  fill
-                  className="object-cover"
-                />
+                <Image src="/pics/IMG_7683.png" alt="Flower arrangement 1" fill className="object-cover" />
               </div>
               <div className="relative w-full aspect-square overflow-hidden rounded-lg">
-                <Image
-                  src="/pics/IMG_7684.png"
-                  alt="Flower arrangement 2"
-                  fill
-                  className="object-cover"
-                />
+                <Image src="/pics/IMG_7684.png" alt="Flower arrangement 2" fill className="object-cover" />
               </div>
               <div className="relative w-full aspect-square overflow-hidden rounded-lg">
-                <Image
-                  src="/pics/IMG_7685.png"
-                  alt="Flower arrangement 3"
-                  fill
-                  className="object-cover"
-                />
+                <Image src="/pics/IMG_7685.png" alt="Flower arrangement 3" fill className="object-cover" />
               </div>
               <div className="relative w-full aspect-square overflow-hidden rounded-lg">
-                <Image
-                  src="/pics/IMG_7688.png"
-                  alt="Flower arrangement 4"
-                  fill
-                  className="object-cover"
-                />
+                <Image src="/pics/IMG_7688.png" alt="Flower arrangement 4" fill className="object-cover" />
               </div>
             </div>
           </div>
@@ -195,12 +168,7 @@ export default function Home() {
       <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto">
           <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg">
-            <Image
-              src="/pics/P1010500.png"
-              alt="Additional photo"
-              fill
-              className="object-cover"
-            />
+            <Image src="/pics/P1010500.png" alt="Additional photo" fill className="object-cover" />
           </div>
         </div>
       </section>
@@ -209,12 +177,7 @@ export default function Home() {
       <section className="px-4 mb-12">
         <div className="max-w-6xl mx-auto">
           <div className="relative w-full aspect-[21/9] overflow-hidden rounded-lg">
-            <Image
-              src="/pics/image.png"
-              alt="Wildflower field"
-              fill
-              className="object-cover"
-            />
+            <Image src="/pics/image.png" alt="Wildflower field" fill className="object-cover" />
           </div>
         </div>
       </section>
