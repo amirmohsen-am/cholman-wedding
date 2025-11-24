@@ -146,14 +146,58 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Color Palette Flowers */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {/* First 2 Flower Images */}
+            <div className="grid grid-cols-2 gap-4 mb-8">
               <div className="relative w-full aspect-square overflow-hidden rounded-lg">
                 <Image src="/pics/IMG_7683.png" alt="Flower arrangement 1" fill className="object-cover" />
               </div>
               <div className="relative w-full aspect-square overflow-hidden rounded-lg">
                 <Image src="/pics/IMG_7684.png" alt="Flower arrangement 2" fill className="object-cover" />
               </div>
+            </div>
+
+            {/* Color Palette Swatches - All Rows Scroll Together */}
+            <div className="bg-white rounded-lg p-6 shadow-lg mb-8">
+              <div className="overflow-x-auto scrollbar-thin">
+                <div className="space-y-3 min-w-max">
+                  {/* Row 1 - Dark Shades */}
+                  <div className="flex gap-2">
+                    {['#CF582A', '#5C3B04', '#7B586F', '#C87765', '#71A3E4', '#A5374A', '#9BB108', '#5A5130', '#B65904'].map((color, idx) => (
+                      <div
+                        key={`row1-${idx}`}
+                        className="w-[60px] h-[60px] rounded-lg shadow-md flex-shrink-0"
+                        style={{ backgroundColor: color }}
+                      />
+                    ))}
+                  </div>
+
+                  {/* Row 2 - Medium Shades */}
+                  <div className="flex gap-2">
+                    {['#FA8E64', '#AA7C2F', '#B998AE', '#DEA99E', '#9FC6F9', '#D97385', '#C8DE2F', '#B8A765', '#EC872B'].map((color, idx) => (
+                      <div
+                        key={`row2-${idx}`}
+                        className="w-[60px] h-[60px] rounded-lg shadow-md flex-shrink-0"
+                        style={{ backgroundColor: color }}
+                      />
+                    ))}
+                  </div>
+
+                  {/* Row 3 - Light Shades */}
+                  <div className="flex gap-2">
+                    {['#FABFA8', '#DFAC57', '#E4D1DD', '#F4D7D1', '#C1DCFF', '#E5BCC3', '#E7F779', '#F1DE98', '#F6C08F'].map((color, idx) => (
+                      <div
+                        key={`row3-${idx}`}
+                        className="w-[60px] h-[60px] rounded-lg shadow-md flex-shrink-0"
+                        style={{ backgroundColor: color }}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Last 2 Flower Images */}
+            <div className="grid grid-cols-2 gap-4">
               <div className="relative w-full aspect-square overflow-hidden rounded-lg">
                 <Image src="/pics/IMG_7685.png" alt="Flower arrangement 3" fill className="object-cover" />
               </div>
