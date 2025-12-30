@@ -233,6 +233,42 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Registry Section */}
+      <section className="px-4 mb-12">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-[#E7F779] rounded-lg p-6 md:p-8 text-center">
+            <h2
+              className="text-4xl md:text-6xl font-normal mb-6 text-balance"
+              style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}
+            >
+              Registry
+            </h2>
+            <p className="text-lg md:text-2xl mb-8 text-pretty" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
+              If you like to give a gift, you can use the link below:
+            </p>
+            <div className="flex justify-center">
+              <a
+                href="https://www.zola.com/registry/saraandshannon2026"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#9BB108] text-white px-4 py-2 rounded-full shadow-md hover:bg-[#7B8B06] active:scale-95 transition-all text-base font-semibold inline-flex items-center gap-2"
+                style={{ fontFamily: "var(--font-sahitya)" }}
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+                View Registry
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Final Message */}
       <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto text-center">
