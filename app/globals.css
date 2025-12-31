@@ -76,3 +76,10 @@ body {
   animation: hero-fade-in-inner 1.2s ease-out 0.2s forwards;
   opacity: 0;
 }
+
+/* Scale down font sizes on desktop */
+@media (min-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}
