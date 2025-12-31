@@ -67,7 +67,7 @@ export default function HeroImage() {
           Sara & Gray
         </h1>
         <p className="text-xl md:text-3xl" style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}>
-          are inviting you to celebrate their love on Saturday, April 11th, 2026
+          are inviting you to celebrate their love on <span className="font-bold">Saturday, April 11th, 2026</span>
         </p>
       </div>
     </section>
