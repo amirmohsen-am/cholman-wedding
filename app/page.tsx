@@ -224,9 +224,12 @@ export default function Home() {
             >
               Transportation
             </h2>
-            <p className="text-lg md:text-2xl text-pretty" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
+            <p className="text-lg md:text-2xl mb-6 text-pretty" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
               The DC area is accessible via plane through DCA or BWI. Both are about a 45 minute drive to Silver Spring, MD. DCA has connections to the DC Metro, which can also be used to get to Silver Spring. Depending on where you're coming from, the Amtrak train is another good option. Riding to Union Station will get you about 30 minutes from the Silver Spring hotel by Metro or car.
             </p>
+            <div className="w-full rounded-lg overflow-hidden mt-6">
+              <Image src="/pics/transporation-map.png" alt="Transportation map showing wedding venue, hotels, and airports" width={1200} height={1200} className="w-full h-auto" />
+            </div>
           </div>
         </div>
       </section>
