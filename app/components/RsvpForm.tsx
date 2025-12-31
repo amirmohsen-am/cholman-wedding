@@ -191,7 +191,7 @@ export default function RsvpForm() {
 
       <div className="mb-6">
         <label htmlFor="message" className="block text-base font-semibold mb-2 text-white" style={{ fontFamily: "var(--font-sahitya)" }}>
-          Message for the Couple (optional)
+          Questions, comments, or anything else? (optional)
         </label>
         <textarea
           id="message"

@@ -40,22 +40,31 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <div className="bg-[#CCDB69] rounded-lg p-6 md:p-8 text-center">
             <h2
-              className="text-4xl md:text-6xl font-normal mb-6 text-balance"
+              className="text-4xl md:text-6xl font-normal mb-8 text-balance"
               style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}
             >
               Venue
             </h2>
-            <p
-              className="text-2xl md:text-4xl font-normal mb-4 text-balance"
+
+            <h3
+              className="text-2xl md:text-3xl font-bold mb-4 text-balance"
               style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}
             >
-              Patapsco Valley State Park - Hollofield Area, Unit 320
+              Ceremony and Reception
+            </h3>
+            <p className="text-lg md:text-2xl mb-8 text-balance" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
+              Patapsco Valley State Park, Hollofield Area, Unit 300<br />
+              8020 Baltimore National Pike, Ellicot City, MD 21403
             </p>
-            <p className="text-xl md:text-3xl mb-6 text-balance" style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}>
-              8020 Baltimore National Pike, Ellicott City, MD 21043
-            </p>
-            <p className="text-xl md:text-2xl" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
-              Special notes TBA...
+
+            <h3
+              className="text-2xl md:text-3xl font-bold mb-4 text-balance"
+              style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}
+            >
+              Post Reception Party
+            </h3>
+            <p className="text-lg md:text-2xl text-balance" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
+              in DC, location TBD
             </p>
           </div>
         </div>
@@ -87,7 +96,7 @@ export default function Home() {
                 <p>1pm - Ceremony</p>
               </div>
               <div className="pb-2">
-                <p>2pm - Lunch, speeches, vibe time</p>
+                <p>2pm - Lunch, speeches, photos</p>
               </div>
               <div className="pb-2">
                 <p>5pm - Wrap up at the park</p>
@@ -120,10 +129,7 @@ export default function Home() {
             </h2>
             <div className="text-center mb-8">
               <p className="text-lg md:text-2xl mb-6 text-pretty" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
-                Feeling cute, we counted on you to wear something fun or saying in case you didn't know this was a picnic style wedding so
-                that's nice and chill it's outside so shoes won't be outside — we recommend shoes you'll feel comfortable walking on
-                grass/dirt in. Early spring like vibe so the day typically has cool spring like weather, with a 20% average chance of
-                precipitation, and average daytime high temperature around 41 F and low temp around 27 F. We recommend layers!
+                Festive attire: we encourage you to wear something fit for spring semi-formal that you'll feel yourself in (with the added note that we will be outside -- we recommend shoes you'll feel comfortable walking on grass/dirt in). Early April in the DMV typically has cool, spring-like weather, with a 30% average chance of precipitation, and average daytime high temperatures around 65 F and lows averaging around 45 F.
               </p>
               <p className="text-lg md:text-xl italic text-balance" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
                 If possible, please use our color palette to inspire your outfit :)
@@ -199,14 +205,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-4 mb-12">
-        <div className="max-w-4xl mx-auto">
-          <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg">
-            <Image src="/pics/P1010500.png" alt="Additional photo" fill className="object-cover" />
-          </div>
-        </div>
-      </section>
-
       {/* Wildflower Photos Section */}
       <section className="px-4 mb-12">
         <div className="max-w-6xl mx-auto">
@@ -227,7 +225,7 @@ export default function Home() {
               Transportation
             </h2>
             <p className="text-lg md:text-2xl text-pretty" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
-              Information about parking, directions, and transportation options coming soon...
+              The DC area is accessible via plane through DCA or BWI. Both are about a 45 minute drive to Silver Spring, MD. DCA has connections to the DC Metro, which can also be used to get to Silver Spring. Depending on where you're coming from, the Amtrak train is another good option. Riding to Union Station will get you about 30 minutes from the Silver Spring hotel by Metro or car.
             </p>
           </div>
         </div>
