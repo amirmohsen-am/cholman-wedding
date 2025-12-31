@@ -2,7 +2,7 @@
 export const WEDDING_EVENT = {
   title: "Sara & Gray's Wedding",
   date: new Date(2026, 3, 11, 12, 0), // April 11, 2026, 12:00 PM (month is 0-indexed)
-  endDate: new Date(2026, 3, 11, 17, 0), // April 11, 2026, 5:00 PM
+  endDate: new Date(2026, 3, 11, 22, 0), // April 11, 2026, 10:00 PM
   location: "Patapsco Valley State Park, Hollofield Area, Unit 300, 8020 Baltimore National Pike, Ellicot City, MD 21403",
   description:
     "Join us to celebrate Sara & Gray's wedding! Ceremony at 1pm, followed by lunch, speeches, and photos. Hala dasta bala, bia vasat hala!",
