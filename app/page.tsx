@@ -53,7 +53,8 @@ export default function Home() {
               Ceremony and Reception
             </h3>
             <p className="text-lg md:text-2xl mb-8 text-balance" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
-              Patapsco Valley State Park, Hollofield Area, Unit 300<br />
+              Patapsco Valley State Park, Hollofield Area, Unit 300
+              <br />
               8020 Baltimore National Pike, Ellicot City, MD 21403
             </p>
 
@@ -129,7 +130,10 @@ export default function Home() {
             </h2>
             <div className="text-center mb-8">
               <p className="text-lg md:text-2xl mb-6 text-pretty" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
-                Festive attire: we encourage you to wear something fit for spring semi-formal that you'll feel yourself in (with the added note that we will be outside -- we recommend shoes you'll feel comfortable walking on grass/dirt in). Early April in the DMV typically has cool, spring-like weather, with a 30% average chance of precipitation, and average daytime high temperatures around 65 F and lows averaging around 45 F.
+                Festive attire: we encourage you to wear something fit for spring semi-formal that you'll feel yourself in (with the added
+                note that we will be outside -- we recommend shoes you'll feel comfortable walking on grass/dirt in). Early April in the DMV
+                typically has cool, spring-like weather, with a 30% average chance of precipitation, and average daytime high temperatures
+                around 65 F and lows averaging around 45 F.
               </p>
               <p className="text-lg md:text-xl italic text-balance" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
                 If possible, please use our color palette to inspire your outfit :)
@@ -225,10 +229,19 @@ export default function Home() {
               Transportation
             </h2>
             <p className="text-lg md:text-2xl mb-6 text-pretty" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
-              The DC area is accessible via plane through DCA or BWI. Both are about a 45 minute drive to Silver Spring, MD. DCA has connections to the DC Metro, which can also be used to get to Silver Spring. Depending on where you're coming from, the Amtrak train is another good option. Riding to Union Station will get you about 30 minutes from the Silver Spring hotel by Metro or car.
+              The DC area is accessible via plane through DCA or BWI. Both are about a 45 minute drive to Silver Spring, MD. DCA has
+              connections to the DC Metro, which can also be used to get to Silver Spring. Depending on where you're coming from, the Amtrak
+              train is another good option. Riding to Union Station will get you about 30 minutes from the Silver Spring hotel by Metro or
+              car.
             </p>
             <div className="w-full rounded-lg overflow-hidden mt-6">
-              <Image src="/pics/transporation-map.png" alt="Transportation map showing wedding venue, hotels, and airports" width={1200} height={1200} className="w-full h-auto" />
+              <Image
+                src="/pics/transporation-map.png"
+                alt="Transportation map showing wedding venue, hotels, and airports"
+                width={1200}
+                height={1200}
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>
@@ -267,18 +280,6 @@ export default function Home() {
               </a>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Final Message */}
-      <section className="px-4 mb-12">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-lg md:text-2xl mb-4 text-balance" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
-            We can't wait to celebrate with you
-          </p>
-          <p className="text-lg md:text-2xl text-balance" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
-            boo mooha mooha
-          </p>
         </div>
       </section>
     </div>
