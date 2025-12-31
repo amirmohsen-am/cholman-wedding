@@ -262,7 +262,7 @@ export default function Home() {
             </p>
             <div className="flex justify-center">
               <a
-                href="https://www.zola.com/registry/saraandshannon2026"
+                href="https://withjoy.com/aroosimoon/registry"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#9BB108] text-white px-4 py-2 rounded-full shadow-md hover:bg-[#7B8B06] active:scale-95 transition-all text-base font-semibold inline-flex items-center gap-2"
