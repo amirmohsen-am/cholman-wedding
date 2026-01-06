@@ -209,15 +209,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Wildflower Photos Section */}
-      <section className="px-4 mb-12">
-        <div className="max-w-6xl mx-auto">
-          <div className="relative w-full aspect-[21/9] overflow-hidden rounded-lg">
-            <Image src="/pics/image.png" alt="Wildflower field" fill className="object-cover" />
-          </div>
-        </div>
-      </section>
-
       {/* Transportation Section */}
       <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto">
@@ -243,6 +234,45 @@ export default function Home() {
                 className="w-full h-auto"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Accommodations Section */}
+      <section className="px-4 mb-12">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-[#E4D1DD] rounded-lg p-6 md:p-8 text-center">
+            <h2
+              className="text-4xl md:text-6xl font-normal mb-6 text-balance"
+              style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}
+            >
+              Accommodations
+            </h2>
+            <p className="text-lg md:text-2xl text-pretty" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
+              For those traveling from out of town, there has been a hotel block made at the Marriott Courtyard in Downtown Silver Spring,
+              MD. If you would like to book a room there, please book at this link:{" "}
+              <a
+                href="https://link.edgepilot.com/s/e2b6ca7e/M2-CUdbmsU6-CdFBM7HzkQ?u=https://app.marriott.com/reslink?id=1765910571938%26key=GRP%26app=resvlink"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:no-underline"
+              >
+                Marriott Courtyard Hotel Block
+              </a>
+            </p>
+            <p className="text-lg md:text-2xl mt-6 text-pretty" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
+              This hotel is located between the ceremony at the park in Maryland and where we will be partying in DC with public transit
+              options into DC. Feel free to book something else if you'd prefer!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Wildflower Photos Section */}
+      <section className="px-4 mb-12">
+        <div className="max-w-6xl mx-auto">
+          <div className="relative w-full aspect-[21/9] overflow-hidden rounded-lg">
+            <Image src="/pics/image.png" alt="Wildflower field" fill className="object-cover" />
           </div>
         </div>
       </section>
