@@ -241,7 +241,7 @@ export default function Home() {
       {/* Accommodations Section */}
       <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-[#E4D1DD] rounded-lg p-6 md:p-8 text-center">
+          <div className="bg-[#DEA99E] rounded-lg p-6 md:p-8 text-center">
             <h2
               className="text-4xl md:text-6xl font-normal mb-6 text-balance"
               style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}
