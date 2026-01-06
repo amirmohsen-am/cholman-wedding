@@ -29,7 +29,7 @@ export default function Home() {
           <div className="mt-8 text-center">
             <p className="text-lg md:text-xl italic text-white" style={{ fontFamily: "var(--font-sahitya)" }}>
               PS: We have plans to turn your invitation into a souvenir for you through a little something in your thank you card, so{" "}
-              <span className="font-bold">keep yours around</span> for a future treat!
+              <span className="font-bold">don't throw your invitation away</span> for a future treat!
             </p>
           </div>
         </div>
