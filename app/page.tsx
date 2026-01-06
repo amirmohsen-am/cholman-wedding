@@ -11,7 +11,7 @@ export default function Home() {
 
       {/* RSVP Form Section with Coral Background */}
       <section className="px-4 mb-12">
-        <div className="max-w-4xl mx-auto bg-[#FF6F3A] rounded-lg p-6 md:p-8">
+        <div className="max-w-4xl mx-auto bg-[#FF6F3A] rounded-lg p-6 md:p-8 shadow-lg">
           <h2
             className="text-4xl md:text-6xl font-normal text-center mb-12 text-white text-balance"
             style={{ fontFamily: "var(--font-sahitya)" }}
@@ -29,7 +29,7 @@ export default function Home() {
 
       <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto">
-          <div className="relative w-full aspect-[3/4] overflow-hidden rounded-lg">
+          <div className="relative w-full aspect-[3/4] overflow-hidden rounded-lg shadow-lg">
             <Image src="/pics/IMG_6416.png" alt="Photo after RSVP" fill className="object-cover" />
           </div>
         </div>
@@ -38,7 +38,7 @@ export default function Home() {
       {/* Venue Section */}
       <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-[#CCDB69] rounded-lg p-6 md:p-8 text-center">
+          <div className="bg-[#CCDB69] rounded-lg p-6 md:p-8 shadow-lg text-center">
             <h2
               className="text-4xl md:text-6xl font-normal mb-8 text-balance"
               style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}
@@ -73,7 +73,7 @@ export default function Home() {
 
       <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto">
-          <div className="relative w-full h-auto overflow-hidden rounded-lg">
+          <div className="relative w-full h-auto overflow-hidden rounded-lg shadow-lg">
             <Image src="/pics/IMG_6391.png" alt="Sara and Gray" width={1920} height={1080} className="object-contain w-full h-auto" />
           </div>
         </div>
@@ -82,7 +82,7 @@ export default function Home() {
       {/* Schedule Section */}
       <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-[#DDB3AA] rounded-lg p-6 md:p-8">
+          <div className="bg-[#DDB3AA] rounded-lg p-6 md:p-8 shadow-lg">
             <h2
               className="text-4xl md:text-6xl font-normal text-center mb-8 text-balance"
               style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}
@@ -112,7 +112,7 @@ export default function Home() {
 
       <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto">
-          <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg">
+          <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg shadow-lg">
             <Image src="/pics/IMG_7779.png" alt="Photo between schedule and dress code" fill className="object-cover" />
           </div>
         </div>
@@ -212,7 +212,7 @@ export default function Home() {
       {/* Transportation Section */}
       <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-[#FFE5B4] rounded-lg p-6 md:p-8 text-center">
+          <div className="bg-[#FFE5B4] rounded-lg p-6 md:p-8 shadow-lg text-center">
             <h2
               className="text-4xl md:text-6xl font-normal mb-6 text-balance"
               style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}
@@ -241,7 +241,7 @@ export default function Home() {
       {/* Accommodations Section */}
       <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-[#DEA99E] rounded-lg p-6 md:p-8 text-center">
+          <div className="bg-[#DEA99E] rounded-lg p-6 md:p-8 shadow-lg text-center">
             <h2
               className="text-4xl md:text-6xl font-normal mb-6 text-balance"
               style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}
@@ -271,7 +271,7 @@ export default function Home() {
       {/* Wildflower Photos Section */}
       <section className="px-4 mb-12">
         <div className="max-w-6xl mx-auto">
-          <div className="relative w-full aspect-[21/9] overflow-hidden rounded-lg">
+          <div className="relative w-full aspect-[21/9] overflow-hidden rounded-lg shadow-lg">
             <Image src="/pics/image.png" alt="Wildflower field" fill className="object-cover" />
           </div>
         </div>
@@ -280,7 +280,7 @@ export default function Home() {
       {/* Registry Section */}
       <section className="px-4 mb-12">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-[#E7F779] rounded-lg p-6 md:p-8 text-center">
+          <div className="bg-[#E7F779] rounded-lg p-6 md:p-8 shadow-lg text-center">
             <h2
               className="text-4xl md:text-6xl font-normal mb-6 text-balance"
               style={{ fontFamily: "var(--font-sahitya)", color: "#42250E" }}
