@@ -73,7 +73,7 @@ export default function Home() {
               Post Reception Party
             </h3>
             <p className="text-lg md:text-2xl text-balance" style={{ fontFamily: "var(--font-sahitya)", color: "#000000" }}>
-              in DC, location TBD
+              Meet us at Shaw's Tavern (2nd floor, 520 Florida Ave NW Washington DC 20001) at 8pm to dance the night away featuring light snacks and a cash bar!
             </p>
           </div>
         </div>
