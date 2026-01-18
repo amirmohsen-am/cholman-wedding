@@ -59,6 +59,35 @@ export default function AdminPage() {
     return sum
   }, 0)
 
+  const exportToCSV = () => {
+    const headers = ['Name', 'Email', 'Phone', 'Attending', 'Plus One', 'Dietary Needs', 'Message', 'Submitted']
+    const csvData = rsvps.map(rsvp => [
+      rsvp.name,
+      rsvp.email,
+      rsvp.phone || '',
+      rsvp.attending ? 'Yes' : 'No',
+      rsvp.plus_one === true ? 'Yes' : rsvp.plus_one === false ? 'No' : '',
+      rsvp.dietary_needs || '',
+      rsvp.message || '',
+      new Date(rsvp.created_at).toLocaleDateString()
+    ])
+
+    const csvContent = [
+      headers.join(','),
+      ...csvData.map(row => row.map(cell => `"${String(cell).replace(/"/g, '""')}"`).join(','))
+    ].join('\n')
+
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' })
+    const link = document.createElement('a')
+    const url = URL.createObjectURL(blob)
+    link.setAttribute('href', url)
+    link.setAttribute('download', `rsvps-${new Date().toISOString().split('T')[0]}.csv`)
+    link.style.visibility = 'hidden'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
   if (!isAuthenticated) {
     return (
       <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
@@ -102,7 +131,15 @@ export default function AdminPage() {
     <div className="min-h-screen bg-gray-100 py-8 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">RSVP Admin</h1>
+          <div className="flex justify-between items-center mb-4">
+            <h1 className="text-3xl font-bold text-gray-900">RSVP Admin</h1>
+            <button
+              onClick={exportToCSV}
+              className="bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition-colors"
+            >
+              Export to CSV
+            </button>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
             <div className="bg-green-50 p-4 rounded border border-green-200">
@@ -182,8 +219,10 @@ export default function AdminPage() {
                     <td className="px-4 py-3 text-sm text-gray-900">
                       {rsvp.dietary_needs || '-'}
                     </td>
-                    <td className="px-4 py-3 text-sm text-gray-900 max-w-xs truncate" title={rsvp.message || ''}>
-                      {rsvp.message || '-'}
+                    <td className="px-4 py-3 text-sm text-gray-900">
+                      <div className="max-w-md whitespace-pre-wrap break-words">
+                        {rsvp.message || '-'}
+                      </div>
                     </td>
                     <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-500">
                       {new Date(rsvp.created_at).toLocaleDateString()}
