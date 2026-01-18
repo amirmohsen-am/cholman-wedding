@@ -99,8 +99,8 @@ const sahitya = Sahitya({
 });
 
 export const metadata: Metadata = {
-  title: "Cholman Wedding RSVP",
-  description: "Wedding RSVP",
+  title: "Aroosi Sara & Gray RSVP",
+  description: "Aroosi RSVP",
 }
 
 export default function RootLayout({
