@@ -159,21 +159,6 @@ export default function RsvpForm() {
       {attending === true && (
         <>
           <div className="mb-5">
-            <label className="block text-lg font-bold mb-2 text-white" style={{ fontFamily: "var(--font-sahitya)" }}>Bringing a Plus One?</label>
-            <p className="text-base text-white mb-3 font-medium" style={{ fontFamily: "var(--font-sahitya)" }}>Please check with us beforehand</p>
-            <div className="space-y-3">
-              <label className="flex items-center text-white text-lg font-medium cursor-pointer" style={{ fontFamily: "var(--font-sahitya)" }}>
-                <input type="radio" name="plusOne" checked={plusOne === true} onChange={() => setPlusOne(true)} className="mr-3 w-5 h-5 cursor-pointer" />
-                Yes
-              </label>
-              <label className="flex items-center text-white text-lg font-medium cursor-pointer" style={{ fontFamily: "var(--font-sahitya)" }}>
-                <input type="radio" name="plusOne" checked={plusOne === false} onChange={() => setPlusOne(false)} className="mr-3 w-5 h-5 cursor-pointer" />
-                No
-              </label>
-            </div>
-          </div>
-
-          <div className="mb-5">
             <label htmlFor="dietary" className="block text-base font-semibold mb-2 text-white" style={{ fontFamily: "var(--font-sahitya)" }}>
               Dietary Restrictions (optional)
             </label>
